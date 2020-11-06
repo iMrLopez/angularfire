@@ -25,7 +25,7 @@ Open `/src/environments/environment.ts` and add your Firebase configuration. You
 ```ts
 export const environment = {
   production: false,
-  firebase: {
+  firebaseConfig: {
     apiKey: '<your-key>',
     authDomain: '<your-project-authdomain>',
     databaseURL: '<your-database-URL>',
@@ -50,7 +50,7 @@ import { environment } from '../environments/environment';
 @NgModule({
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   declarations: [ AppComponent ],
   bootstrap: [ AppComponent ]
